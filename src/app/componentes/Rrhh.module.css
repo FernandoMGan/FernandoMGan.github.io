@@ -1,0 +1,161 @@
+/* File: src/app/componentes/RrhhyCeo.module.css */
+/* Contenedor principal de tarjetas/info */
+.secctions {
+  font-style: unset;
+  background: var(--color-bg-info);
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  padding: 20px 20px;
+  gap: 10px;
+  min-width: 350px;
+}
+/* Línea y disposición vertical de tarjetas */
+.timeline {
+  position: relative;
+  padding-left: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+/* Tarjetas individuales de habilidades */
+.timeline-card {
+  background: #c3c0c0;
+  border-radius: 8px;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 2px 6px 0 rgba(20, 90, 150, 0.03);
+  padding: 22px 20px 18px 28px;
+  margin-bottom: 0;
+  position: relative;
+  min-width: 280px;
+}
+
+/* Decoración: círculo de avance tipo timeline */
+.timeline-card::before {
+  content: '';
+  position: absolute;
+  left: -32px;
+  top: 32px;
+  width: 14px;
+  height: 14px;
+  background: var(--color-secondary, #3b82f6);
+  border-radius: 50%;
+  border: 3px solid #fff;
+  box-shadow: 0 0 0 2px #cbd5e1;
+  z-index: 2;
+}
+
+/* Línea vertical conectando items, salvo el último */
+.timeline-card:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  left: -25px;
+  top: 46px;
+  width: 1px;
+  height: calc(100% + 24px);
+  background: #cbd5e1;
+  z-index: 1;
+}
+
+/* Título del bloque: tipo de habilidades */
+.timeline-nivel {
+  font-weight: bold;
+  color: #76599f;
+  font-size: 1.07rem;
+  margin-bottom: 8px;
+  letter-spacing: 1px;
+}
+
+/* Lista de habilidades dentro de cada tarjeta */
+.timeline-titulo {
+  margin-bottom: 8px;
+  padding-left: 18px;
+}
+.timeline-titulo li {
+  color: #2b3137;
+  font-size: 1.04rem;
+  margin-bottom: 4px;
+}
+
+/* Chip indicativo de estado o dominio */
+.chipCompleto {
+  background: #43b77a;
+  color: #fff;
+  border-radius: 10px;
+  padding: 3px 11px;
+  font-size: 0.98rem;
+  font-weight: 500;
+  margin-top: 4px;
+  display: inline-block;
+}
+.chipRecibido {
+  background: #3b82f6;
+  color: #fff;
+  border-radius: 10px;
+  padding: 3px 11px;
+  font-size: 0.98rem;
+  font-weight: 500;
+  margin-top: 4px;
+  display: inline-block;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .timeline-card {
+    padding: 16px 12px;
+  }
+  .secctions {
+    padding: 10px 2px;
+    min-width: unset;
+  }
+}
+.aclaracion {
+  color: #44617b;
+  font-size: 0.95rem;
+  margin-top: 4px;
+  margin-left: 2px;
+  display: block;
+  opacity: 0.9;
+}
+
+/* Corrections time line sec */
+/* Tarjetas individuales de habilidades */
+.timeline-cardsec {
+  background: #c3c0c0;
+  border-radius: 8px;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 2px 6px 0 rgba(20, 90, 150, 0.03);
+  padding: 22px 20px 18px 28px;
+  margin-bottom: 10;
+  position: relative;
+  margin-left: 20px;
+  min-width: 280px;
+}
+
+/* Decoración: círculo de avance tipo timeline */
+.timeline-cardsec::before {
+  content: '';
+  position: absolute;
+  left: -32px;
+  top: 32px;
+  width: 14px;
+  height: 14px;
+  background: var(--color-secondary, #3b82f6);
+  border-radius: 50%;
+  border: 3px solid #fff;
+  box-shadow: 0 0 0 2px #cbd5e1;
+  margin-left: 10px;
+  z-index: 2;
+}
+
+/* Línea vertical conectando items, salvo el último */
+.timeline-cardsec:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  left: -25px;
+  top: 46px;
+  width: 1px;
+  height: calc(100% + 0px);
+  background: #cbd5e1;
+  margin-left: 10px;
+  z-index: 1;
+}
